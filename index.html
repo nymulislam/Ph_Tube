@@ -13,23 +13,34 @@
     <title>PH Tube | A Powerful Streaming Platform</title>
 </head>
 
-<body>
+<body class="max-w-6xl mx-auto">
     <nav>
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 mb-6 my-10">
             <div class="navbar-start">
-                <img class="btn btn-ghost hover:bg-red-100" src="./Images/Logo.png" alt="Logo">
+                <img class="btn btn-ghost hover:bg-red-100 rounded-md" src="./Images/Logo.png" alt="Logo">
             </div>
             <div>
-                <button class="btn btn-sm normal-case text-base bg-gray-300 hover:bg-red-200">Sort by view</button>
+                <button class="btn px-9 text-lg bg-gray-300 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">Sort by view</button>
             </div>
             <div class="navbar-end">
-                <button class="btn btn-sm bg-red-500 hover:bg-red-600 text-white normal-case">Blog</button>
+                <button class="btn px-5 text-lg bg-red-500 hover:bg-red-600 text-white normal-case rounded-md">Blog</button>
             </div>
         </div>
+        <hr>
     </nav>
 
     <main>
+        <section>
+            <div class="flex justify-center gap-6 my-12">
+                <button class="btn px-9 text-lg bg-gray-200 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">All</button>
+                <button class="btn px-9 text-lg bg-gray-200 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">Music</button>
+                <button class="btn px-9 text-lg bg-gray-200 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">Comedy</button>
+                <button class="btn px-9 text-lg bg-gray-200 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">Drawing</button>
+            </div>
+            <div id="card_container" class="grid grid-cols-4 gap-5">
 
+            </div>
+        </section>
     </main>
 
     <script src="./JS/script.js"></script>
