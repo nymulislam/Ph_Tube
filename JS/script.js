@@ -1,28 +1,25 @@
 // get category from API
-
 const categoriesApi = async () => {
-    const res = await fetch (`https://openapi.programming-hero.com/api/videos/categories`);
+    const res = await fetch(`https://openapi.programming-hero.com/api/videos/categories`);
     const data = await res.json();
     const categoryData = data.data;
     fourButton(categoryData)
 }
-
 categoriesApi()
+
 
 const fourButton = categories => {
     const categoryContainer = document.getElementById('category_container');
-
+    
     categories.forEach(category => {
         const newDiv = document.createElement('div');
-        newDiv.classList = ``
         newDiv.innerHTML = `
         <button onclick = "playCard('${category.category_id}')"
-        class="btn px-9 text-lg bg-gray-200 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">${category.category}</button>
+        class="btn px-9 text-lg bg-gray-200 active:text-white active:bg-red-500 hover:bg-red-100 normal-case rounded-md">${category.category}</button>
         `
-    categoryContainer.appendChild(newDiv)
+        categoryContainer.appendChild(newDiv)
     })
 }
-
 
 // get Json data from API
 const playCard = async (categoryId) => {
@@ -37,6 +34,7 @@ const playCard = async (categoryId) => {
 // show card by dynamic dom creation
 const dynamicSection = cards => {
     const cardContainer = document.getElementById('card_container');
+    cardContainer.textContent = '';
     cards.forEach(card => {
         const createElement = document.createElement('div')
         createElement.innerHTML = `
@@ -63,7 +61,7 @@ const dynamicSection = cards => {
             </div>
         </div>
     `
-    cardContainer.appendChild(createElement)
+        cardContainer.appendChild(createElement)
     });
 }
 
@@ -73,6 +71,11 @@ const convertTime = second => {
     const minutes = parseInt((second / 60) - hoursSum * 60);
     const hours = hoursSum.toString().slice(0, 1)
     return `${hours}hrs ${minutes}min ago`
+}
+
+// Link blog page
+const blog = () => {
+    window.open('blog.html#')
 }
 
 

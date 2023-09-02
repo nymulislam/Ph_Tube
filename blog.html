@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+    </style>
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap');
+
+        .body {
+            font-family: 'Tiro Bangla', serif;
+            font-size: xx-large;
+        }
+    </style>
+
+    <title>PH Blog | Read latest blog</title>
+</head>
+
+<body class="bg-white font-family-karla">
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                PHero Blog
+            </a>
+            <p class="text-lg text-gray-600">
+                Let's Enjoy Programming
+            </p>
+        </div>
+    </header>
+
+    <div class="container mx-auto flex flex-wrap justify-center py-6">
+        <!-- Posts Section -->
+        <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+
+            <!-- Article -1 -->
+            <article class="flex flex-col shadow my-4">
+                <!-- Article Image -->
+                <a href="#" class="hover:opacity-75">
+                    <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+                <div class="bg-white flex flex-col justify-start p-6">
+                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Technology</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Discuss the scope of var, let, and
+                        const</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="font-semibold hover:text-gray-800">Naymul Islam</a>, Published on
+                        September
+                        2nd, 2023
+                    </p>
+                    <p class="pb-6">
+                        <br><br>
+
+                        এই আর্টিকেলে আমরা var, let, এবং const এর scope নিয়ে আলোচনা করব।
+
+                        <br><br>
+                        ES6 এর আসার আগে প্রোগ্রামাররা সব জায়গায়ই "var" কিওয়ার্ডটি ব্যবহার করত। যদিও এতে বেশ কিছু সমস্যা
+                        দেখা দিয়েছিল।
+
+                        <br><br>
+                        "Var" এর scope বলতে বুঝায়, ভ্যারিয়েবলটি কোডের কোন অংশে ব্যবহার করা যায়। var ডিক্লারেশন
+                        করা যেতে পারে globally scoped অথবা function scoped।
+
+                        যখন var ব্যবহার করে একটি ভ্যারিয়েবলকে কোনো ফাংশনের বাহিরে ডিক্লেয়ার করা হয়, তখন ভ্যারিয়েবলটি
+                        global scope-এ থাকে।
+
+                        <br><br>
+                        আবার যখন var ব্যবহার করে একটি ভ্যারিয়েবলকে কোনো ফাংশনব্লকের ভিতরে ডিক্লেয়ার করা হয়, তখন সেটা
+                        function scoped হয়ে যায়।
+
+                        <br><br>
+                        ভ্যারিয়েবল declaration-এর জন্য এখন let বেশি ব্যবহার করা হয়। var declaration থেকে let খুব
+                        powerful এবং এটি var এর সমস্যাগুলোকেও সমাধান করে। চলুন দেখা যাক কিভাবে সেটা হয়।
+
+                        <br><br>
+
+                        let হল block scoped । second braces {} এর মধ্যে যা কিছু থাকে, তার সবকিছুই একটি block।
+
+                        সুতরাং, কোন block এর ভেতরে let ব্যবহার করে declare করা variable শুধু ওই block এর মধ্যেই
+                        ব্যবহার করা যাবে।
+
+                        let update করা যায়, তবে redeclare করা যায় না।
+
+                        <br><br>
+
+                        const ব্যবহার করে declare করা ভ্যারিয়েবলগুলো হলো অপরিবর্তনীয়। const declare
+                        অনেকাংশে let এর মতোই।
+
+                        <br><br>
+                        const ডিক্লারেশনগুলোও block scoped
+                        let declaration এর মতই, const ডিক্লারেশনগুলোও যে block-এ declare করা হয়েছে, শুধু সেই ব্লকেই
+                        use করা যায়।
+
+                        const রিডিক্লেয়ার বা আপডেট করা যায় না।
+
+                        <br><br><br><br>
+                        var ভ্যারিয়েবলগুলো তাদের scope-এর মধ্যে update এবং redeclare করা যায়।
+                        <br> <br>
+                        let ভ্যারিয়েবলগুলোকে
+                        update করা গেলেও redeclare করা যায় না।
+                        <br><br>
+                        const ভ্যারিয়েবলগুলোকে আপডেট বা রিডিক্লেয়ার কোনটাই করা
+                        যায় না।
+                    </p>
+                    <a href="#" class="uppercase text-gray-800 hover:text-black">Continue Reading <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Article -2 -->
+            <article class="flex flex-col shadow my-4">
+                <!-- Article Image -->
+                <a href="#" class="hover:opacity-75">
+                    <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+                <div class="bg-white flex flex-col justify-start p-6">
+                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Technology</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Use cases of null and undefined</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="font-semibold hover:text-gray-800">Naymul Islam</a>, Published on
+                        September
+                        2nd, 2023
+                    </p>
+                    <p class="pb-6">
+                        <br>
+                        <strong>null:</strong> <br>
+                        JavaScript-এ null মানে কিছুই নয়। এটা এমন কিছুকে বোঝায়, যা এখন আর বিদ্যমান নেই।
+
+                        <br><br>
+                        JavaScript-এ null-কে একটি object হিসেবে বিবেচনা করা হয়।
+                        কোনো variable-কে null হিসেবে declare করে খালি একটি object তৈরি করা যায়।
+
+                        <br><br>
+                        var person = null; // Value is null, but type is still an object
+                        <br><br>
+                        একটি variable-কে undefined হিসেবে declare করেও খালি একটি object তৈরি করা যায়।
+
+                        <br><br>
+                        var person = undefined; // Value is undefined, type is undefined
+
+                        <br><br>
+                        <strong>undefined:</strong> <br>
+                        JavaScript-এ undefined হলো একটি variable, যার কোনো Value নেই।
+
+                        <br><br>
+                        var person; // Value is undefined, type is undefined
+                        <br><br>
+                        একটি variable-কে undefined declare করার মাধ্যমেও variable-এর Value খালি করা যায়।
+                        <br><br>
+                        person = undefined; // Value is undefined, type is undefined
+
+                        <br><br>
+                        <strong>undefined এবং null-এর মধ্যে পার্থক্য:</strong>
+                        <br>
+                        typeof undefined // undefined
+                        typeof null // object
+                        null === undefined // false
+                        null == undefined // true
+                    </p>
+                    <a href="#" class="uppercase text-gray-800 hover:text-black">Continue Reading <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Article -3 -->
+            <article class="flex flex-col shadow my-4">
+                <!-- Article Image -->
+                <a href="#" class="hover:opacity-75">
+                    <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+                <div class="bg-white flex flex-col justify-start p-6">
+                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Technology</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Discuss About REST API</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="font-semibold hover:text-gray-800">Tecognize Training</a>, Published on
+                        January
+                        9th, 2022
+                    </p>
+                    <p class="pb-6">
+                        <br><br>
+
+                        REST প্যারাডাইম রিলিজ হয় ২০০০ সালে। ইন্টারনেট জায়ান্ট - google, yahoo, amazon, e-bay, facebook,
+                        x, paypal সহ সবাই এখন restful এপিআই provide করে।
+
+                        <br><br>
+                        Representational State Transfer মানে হলো এটি কোনো কিছুর অবস্থা বা স্টেট একটি রিপ্রেজেন্টেশন এর
+                        মাধ্যমে client to server এবং server to client ট্রান্সফার করে। কোন ডকুমেন্টের মাধ্যমে
+                        রিসোর্সের তথ্য প্রকাশ করাকে রিপ্রেজেন্টেশন বলে।
+
+                        <br><br>
+                        ইনফরমেশন এর সোর্স যেটি URI (Uniform Resource Identifiers) দিয়ে প্রকাশ করা হয়, অর্থাৎ প্রতিটি
+                        লিংক একটি রিসোর্সকে বর্ণনা করে। REST এর মুলভিত্তি হলো resource। যে কোনো তথ্য যেটাকে আমরা একটি নাম
+                        দিতে পারব সেটাই রিসোর্স। রিসোর্সকে অবজেক্ট ওরিয়েন্টেড অবজেক্টের সাথে তুলনা করা যেতে পারে ।
+                        ওওপি’র অবজেক্টের মতো রেস্ট-এর প্রতিটি রিসোর্সের কিছু ডাটা থাকবে, একটি রিসোর্সের সাথে অন্য
+                        রিসোর্সের রিলেশন থাকবে এবং এটাকে অপারেট করার জন্য একটি মেথড সেট থাকবে । পার্থক্য শুধু এতটুকু যে
+                        ওওপিতে অনেক মেথড থাকতে পারে আর রেস্ট এর মেথড সীমাবদ্ধ [GET,POST,PUT,DELETE] । একটি রিসোর্সের
+                        মধ্যে আবার অনেক চাইল্ড রিসোর্স থাকতে পারে । এক্ষেত্রে একে কালেকশন বলে এবং এতে শর্ত হচ্ছে একটি
+                        কালেকশনে কেবল একই টাইপের রিসোর্স থাকবে। রিসোর্স URLs এর অংশ যেমন /users.
+
+                        <br><br>
+                        প্রতিটি রিসোর্স এর জন্যে সাধারণত দুইটি URLs ইমপ্লিমেন্ট করা হয়। একটি ইমপ্লিমেন্ট করা হয় কালেকশন
+                        এর জন্যে যেমন /users, আরেকটি করা হয় স্পেসিফিক ইলিমেন্ট এর জন্যে যেমন /users/U123. রিসোর্স এর
+                        নামে Verb ব্যবহার করা যাবে না। /getAllUser, /addUser, /deleteUser ব্যবহার করা যাবে না। রিসোর্স
+                        ডিফাইন করার পর এই রিসোর্স গুলোতে কি ধরনের এক্সেস বা অপারেশন করবেন তার একটা ম্যাপিং করতে হবে।
+                        HTTP মেথড যেমন GET, POST, UPDATE এবং DELETE সার্ভার কে ইনফর্ম করে কি ধরণের অ্যাকশন পারফর্ম করতে
+                        হবে।
+
+                        <br><br>
+                        POST /resource - ডাটাবেজে একটি নতুন রিসোর্সের এর এন্ট্রি দিবেন।
+                        <br><br>
+                        GET /resources - রিসোর্সের এর একটা লিস্ট রিটার্ন করবে।
+
+                        <br><br>
+                        GET /resource/10 –একটা নির্দিষ্ট রিসোর্স রিটার্ন করবে যার আইডি 10।
+
+                        <br><br>
+                        PUT /resource/10 –একটি রিসোর্স এর তথ্য আপডেট করবেন যার আইডি 10 ।
+
+                        <br><br>
+                        DELETE /resource/12 – রিসোর্সটি ডিলেট করে দিবেন।
+
+                        <br><br>
+                        সার্ভার স্ট্যান্ডার্ড HTTP রেসপন্স স্ট্যাটাস কোড রিটার্ন করে ক্লায়েন্ট-এর রিকোয়েস্ট এর ভিত্তিতে
+                        যা কিনা success অথবা failure নিৰ্দেশ করে। সাধারণত 2XX রেঞ্জ এর কোড success নির্দেশ করে, 3XX
+                        রেঞ্জ এর কোড নির্দেশ করে রিসোর্স মুভ করা হয়েছে। 4XX রেঞ্জ এর কোড নির্দেশ client-side এ কোনো
+                        error আছে। 5XX রেঞ্জ এর কোড নির্দেশ server-side এ কোনো error আছে।
+
+                        <br><br>
+                        REST API সাধারণত JSON অথবা XML ফরম্যাট এ রেসপন্স করে। অন্য ফরম্যাট ও সাপোর্ট করে থাকে। এটি
+                        স্টেটলেস অথ্যাৎ সার্ভার ক্লায়েন্ট এর এক্টিভিটি মনে রাখে না। সাধারণত এপিআই এক্সেসের জন্য একটি
+                        এপিআই কি বা টোকেন প্রোভাইড করা হয় যেটি কখনো মেয়াদউত্তীর্ন হয় না । ফলে কোনো রিকোয়েস্ট সেশন বা
+                        কুকির উপর নির্ভর করে না। Rest api ক্যাশেবল এবং স্কেলেবল।
+
+                        <br><br>
+                        রেস্ট এপিআই একটি সহজ সরল, হাইলি স্কেলেবল আর্কিটেকচার হিসেবে প্রমাণিত। মডার্ন সকল সিস্টেমই রেস্ট-এ মুভ করে গেছে।
+                    </p>
+                    <a href="#" class="uppercase text-gray-800 hover:text-black">Continue Reading <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>
