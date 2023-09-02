@@ -4,15 +4,20 @@ const categoriesApi = async () => {
     const data = await res.json();
     const categoryData = data.data;
     fourButton(categoryData)
+
+    if (categoryData.length> 0){
+        playCard(categoryData[0].category_id);
+    }
 }
 categoriesApi()
 
-
 const fourButton = categories => {
     const categoryContainer = document.getElementById('category_container');
-    
+
     categories.forEach(category => {
         const newDiv = document.createElement('div');
+
+
         newDiv.innerHTML = `
         <button onclick = "playCard('${category.category_id}')"
         class="btn px-9 text-lg bg-gray-200 active:text-white active:bg-red-500 hover:bg-red-100 normal-case rounded-md">${category.category}</button>
@@ -29,12 +34,18 @@ const playCard = async (categoryId) => {
     dynamicSection(cards)
 }
 
-
-
 // show card by dynamic dom creation
 const dynamicSection = cards => {
     const cardContainer = document.getElementById('card_container');
     cardContainer.textContent = '';
+
+    const error = document.getElementById('find_data');
+    if (cards.length > 0) {
+        error.classList.add('hidden');
+    } else {
+        error.classList.remove('hidden');
+    }
+
     cards.forEach(card => {
         const createElement = document.createElement('div')
         createElement.innerHTML = `
@@ -61,6 +72,7 @@ const dynamicSection = cards => {
             </div>
         </div>
     `
+
         cardContainer.appendChild(createElement)
     });
 }
