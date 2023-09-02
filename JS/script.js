@@ -52,7 +52,7 @@ const dynamicSection = cards => {
         <div class="card w-full bg-base-100 shadow-xl mt-20">
         <figure>
             <img class="h-52" src="${card.thumbnail}" alt="Thumbnail" />
-            <div class="absolute w-fit top-44 md:top-44 left-52 md:left-40 px-1 py-1 bg-gray-900 rounded-md" style="${card.others.posted_date > 0 ? '' : 'display: none;'}">
+            <div class="absolute w-fit top-44 md:top-44 left-52 md:left-64 lg:left-40 px-1 py-1 bg-gray-900 rounded-md" style="${card.others.posted_date > 0 ? '' : 'display: none;'}">
                 <p class=" text-white text-sm">${card.others.posted_date > 0 ? convertTime(card.others.posted_date) : ''}</p>
             </div>
         </figure>
