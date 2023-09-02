@@ -5,7 +5,7 @@ const categoriesApi = async () => {
     const categoryData = data.data;
     fourButton(categoryData)
 
-    if (categoryData.length> 0){
+    if (categoryData.length > 0) {
         playCard(categoryData[0].category_id);
     }
 }
@@ -16,7 +16,6 @@ const fourButton = categories => {
 
     categories.forEach(category => {
         const newDiv = document.createElement('div');
-
 
         newDiv.innerHTML = `
         <button onclick = "playCard('${category.category_id}')"
@@ -53,7 +52,7 @@ const dynamicSection = cards => {
         <div class="card w-full bg-base-100 shadow-xl mt-20">
         <figure>
             <img class="h-52" src="${card.thumbnail}" alt="Thumbnail" />
-            <div class="absolute w-fit top-44 left-40 px-1 py-1 bg-gray-900 rounded-md" style="${card.others.posted_date > 0 ? '' : 'display: none;'}">
+            <div class="absolute w-fit top-44 md:top-44 left-52 md:left-40 px-1 py-1 bg-gray-900 rounded-md" style="${card.others.posted_date > 0 ? '' : 'display: none;'}">
                 <p class=" text-white text-sm">${card.others.posted_date > 0 ? convertTime(card.others.posted_date) : ''}</p>
             </div>
         </figure>
@@ -89,6 +88,5 @@ const convertTime = second => {
 const blog = () => {
     window.open('blog.html#')
 }
-
 
 

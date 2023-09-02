@@ -13,15 +13,15 @@
     <title>PH Tube | A Powerful Streaming Platform</title>
 </head>
 
-<body class="max-w-6xl mx-auto">
+<body class="container mx-auto overflow-x-hidden">
     <nav>
-        <div class="navbar bg-base-100 mb-6 my-10">
+        <div class="navbar bg-base-100 mb-6 my-3 md:my-10">
             <div class="navbar-start">
                 <img class="btn btn-ghost hover:bg-red-100 rounded-md" src="./Images/Logo.png" alt="Logo">
             </div>
             <div>
                 <button
-                    class="btn px-9 text-lg bg-gray-300 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md">Sort
+                    class="btn px-9 text-lg bg-gray-300 active:bg-red-500 hover:bg-red-100 active:text-white normal-case rounded-md hidden md:block">Sort
                     by view</button>
             </div>
             <div class="navbar-end">
@@ -34,11 +34,11 @@
 
     <main>
         <section>
-            <div id="category_container" class="max-w-full mx-auto my-12 flex justify-center gap-5">
+            <div id="category_container" class="max-w-full mx-auto my-8 md:my-12 flex justify-center flex-wrap gap-5">
 
             </div>
 
-            <div id="card_container" class="grid grid-cols-4 gap-5">
+            <div id="card_container" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5">
 
             </div>
             <div id="find_data" class="text-center w-full mt-10 hidden">
